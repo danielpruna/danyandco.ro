@@ -12,36 +12,37 @@
   <meta property="og:url" content="https://www.danyandco.ro/" />
   <meta property="og:image" content="https://www.danyandco.ro/logo.png" />
   <style>
-    :root { --bg:#ffffff; --card:#f9fafb; --text:#111827; --muted:#6b7280; --accent:#2563eb; --accent2:#22d3ee; }
+    :root { --bg:#ffffff; --card:#f9fafb; --text:#111827; --muted:#6b7280; --accent:#2563eb; }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:var(--bg)}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     header{position:sticky;top:0;background:#f3f4f6;border-bottom:1px solid #e5e7eb;z-index:10}
-    .nav{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-weight:600}
     .brand img{height:36px;width:auto;display:block;object-fit:contain}
     .topmenu a{margin-left:14px;color:var(--text);opacity:.9;font-weight:500}
     .topmenu a:hover{opacity:1;text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:24px 20px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:42px 0}
+    .container{max-width:1100px;margin:0 auto;padding:28px 20px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:56px 0 42px}
     .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #e5e7eb;padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
-    h1{font-size:clamp(28px,4vw,44px);margin:10px 0 12px;line-height:1.1}
+    h1{font-size:clamp(28px,4vw,44px);margin:12px 0 14px;line-height:1.1}
     p{color:var(--text);opacity:.9}
     .cta{display:flex;gap:12px;margin-top:18px}
-    .btn{border:1px solid #e5e7eb;background:var(--accent);color:#fff;padding:12px 16px;border-radius:12px;font-weight:600}
-    .btn:hover{opacity:.9;transform:translateY(-1px)}
-    .ghost{background:transparent;color:var(--accent)}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+    .btn{border:1px solid #e5e7eb;background:var(--accent);color:#fff;padding:12px 16px;border-radius:16px;font-weight:600;box-shadow:0 0 0 4px rgba(37,99,235,.15)}
+    .btn:hover{opacity:.95;transform:translateY(-1px)}
+    .ghost{background:transparent;color:var(--accent);box-shadow:none}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
     .grid{display:grid;gap:16px}
     .grid.cols-3{grid-template-columns:repeat(3,1fr)}
     .grid.cols-2{grid-template-columns:repeat(2,1fr)}
     .section{padding:28px 0}
     .muted{color:var(--muted)}
     img{max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e7eb}
+    .cta-card{padding:32px}
+    .telline{margin-top:14px}
     footer{border-top:1px solid #e5e7eb;margin-top:32px;background:#f9fafb}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:18px 0}
-    .tag{display:inline-block;padding:4px 8px;border:1px solid #e5e7eb;border-radius:8px;margin:4px 8px 0 0;color:var(--muted);font-size:12px}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
     @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}.topmenu{width:100%;display:flex;gap:14px;justify-content:flex-start;padding-left:46px;flex-wrap:wrap}}
   </style>
@@ -74,7 +75,23 @@
         </div>
       </div>
       <div>
-        <img src="/assets/servicii-contabilitate.jpg" alt="Servicii de contabilitate – ilustrație generală" loading="lazy" />
+        <!-- Înlocuit imaginea 404 cu un placeholder SVG inline (nu necesită fișier) -->
+        <svg viewBox="0 0 600 380" role="img" aria-label="Ilustrație servicii contabilitate" style="width:100%;height:auto;border:1px solid #e5e7eb;border-radius:12px">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#eaf2ff"/>
+              <stop offset="1" stop-color="#f5f7fb"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="600" height="380" fill="url(#g)"/>
+          <rect x="40" y="60" width="520" height="220" rx="12" fill="#fff" stroke="#e5e7eb"/>
+          <rect x="70" y="90" width="180" height="20" rx="6" fill="#c7d2fe"/>
+          <rect x="70" y="120" width="120" height="12" rx="6" fill="#dbeafe"/>
+          <rect x="70" y="140" width="140" height="12" rx="6" fill="#e0e7ff"/>
+          <rect x="70" y="160" width="100" height="12" rx="6" fill="#dbeafe"/>
+          <rect x="320" y="95" width="210" height="150" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+          <polyline points="330,220 360,180 400,200 450,140 510,170" fill="none" stroke="#2563eb" stroke-width="3"/>
+        </svg>
       </div>
     </section>
 
@@ -92,7 +109,7 @@
           </p>
           <p>
             Email: <a id="emailLink" href="#" rel="nofollow noopener">[afișează email]</a><br />
-            Telefon: <a id="telLink" href="#" rel="nofollow noopener">[afișează telefon]</a>
+            Telefon: <span class="mono" aria-label="număr telefon"><canvas id="telCanvas1" width="180" height="24"></canvas></span>
           </p>
         </div>
         <div class="card">
@@ -104,7 +121,7 @@
     </section>
 
     <!-- CTA SCURTĂ -->
-    <section class="section card">
+    <section class="section card cta-card">
       <div class="grid cols-2">
         <div>
           <h2>Hai să discutăm nevoile afacerii tale</h2>
@@ -112,7 +129,7 @@
         </div>
         <div>
           <a class="btn" href="#" id="ctaEmail2">Contactează-ne pe email</a>
-          <div class="muted" style="margin-top:8px">sau sună: <a id="telLink2" href="#" rel="nofollow noopener">[afișează telefon]</a></div>
+          <div class="muted telline">sau sună: <span class="mono"><canvas id="telCanvas2" width="160" height="20"></canvas></span></div>
         </div>
       </div>
     </section>
@@ -121,35 +138,38 @@
   <footer class="container">
     <div class="footer-grid">
       <div class="muted">© <span id="y"></span> Dany&Co Expert Consulting SRL. Toate drepturile rezervate.</div>
-      <div style="text-align:right" class="muted"><a href="#">Politica de confidențialitate</a></div>
+      <div style="text-align:right" class="muted"><a href="confidentialitate.html">Politica de confidențialitate</a></div>
     </div>
   </footer>
 
   <script>
+    // An curent
     document.getElementById('y').textContent = new Date().getFullYear();
 
+    // Anti-spam: email construit la runtime
     var em1 = 'contact';
     var em2 = 'danyandco';
     var em3 = 'ro';
     var email = em1 + '@' + em2 + '.' + em3;
 
-    var phoneDisplay = '0744 532 009';
-    var phoneHref = 'tel:0744532009';
-
     var emailLink = document.getElementById('emailLink');
-    var telLink = document.getElementById('telLink');
     var ctaEmail = document.getElementById('ctaEmail');
     var ctaEmail2 = document.getElementById('ctaEmail2');
-    var telLink2 = document.getElementById('telLink2');
 
-    function revealEmail(ev){ if (ev) ev.preventDefault(); if (!emailLink) return; emailLink.textContent = email; emailLink.href = 'mailto:' + email; if(ctaEmail) ctaEmail.href = 'mailto:' + email; if(ctaEmail2) ctaEmail2.href = 'mailto:' + email; }
-    function revealTel(ev){ if (ev) ev.preventDefault(); if (!telLink) return; telLink.textContent = phoneDisplay; telLink.href = phoneHref; if(telLink2){ telLink2.textContent = phoneDisplay; telLink2.href = phoneHref; }}
-
+    function revealEmail(ev){ if (ev) ev.preventDefault(); if (!emailLink) return; emailLink.textContent = email; emailLink.href = 'mailto:' + email; }
     if (emailLink) emailLink.addEventListener('click', revealEmail, { once:true });
-    if (telLink) telLink.addEventListener('click', revealTel, { once:true });
-    if (telLink2) telLink2.addEventListener('click', revealTel, { once:true });
+    setTimeout(function(){ revealEmail(); if(ctaEmail) ctaEmail.href = 'mailto:' + email; if(ctaEmail2) ctaEmail2.href = 'mailto:' + email; }, 900);
 
-    setTimeout(function(){ revealEmail(); revealTel(); }, 1200);
+    // Telefon desenat pe canvas (mai greu de extras de boți)
+    function drawPhone(id, text){
+      var c = document.getElementById(id); if(!c) return; var ctx = c.getContext('2d');
+      ctx.font = '600 16px system-ui, -apple-system, Segoe UI, Roboto, Arial';
+      ctx.fillStyle = '#111827';
+      ctx.textBaseline = 'top';
+      ctx.fillText(text, 2, 2);
+    }
+    drawPhone('telCanvas1','0744 532 009');
+    drawPhone('telCanvas2','0744 532 009');
   </script>
 </body>
 </html>
