@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Despre noi – Dany&Co Expert Consulting SRL</title>
+  <meta name="description" content="Povestea Dany&Co: de la primul client la un portofoliu divers de IMM-uri. Valori, principii și modul nostru de lucru în contabilitate." />
+  <style>
+    :root { --bg:#ffffff; --card:#f9fafb; --text:#111827; --muted:#6b7280; --accent:#2563eb; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;line-height:1.7;background:var(--bg);color:var(--text)}
+    header{background:#f3f4f6;border-bottom:1px solid #e5e7eb}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:900px;margin:0 auto;padding:24px 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:600}
+    .brand img{height:30px}
+    .topmenu a{margin-left:14px;color:var(--text)}
+    h1{font-size:clamp(28px,4vw,40px);margin:12px 0}
+    .lead{color:var(--muted)}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px;margin-top:18px}
+    .grid{display:grid;gap:16px}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    footer{border-top:1px solid #e5e7eb;background:#f9fafb;margin-top:28px}
+    .quote{border-left:4px solid #e5e7eb;padding-left:12px;color:#374151;font-style:italic}
+    @media (max-width:900px){.cols-3{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="logo.png" alt="Dany&Co"/> <span>Dany&Co Expert Consulting SRL</span></a>
+      <nav class="topmenu">
+        <a href="servicii.html">Servicii</a>
+        <a href="despre.html">Despre</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Despre noi</h1>
+    <p class="lead">Suntem o firmă de contabilitate născută dintr-o idee simplă: <strong>contabilitatea trebuie să fie clară, la timp și orientată spre decizie</strong>. Am pornit cu un birou mic și un singur client. Astăzi lucrăm cu IMM‑uri din comerț, servicii și producție, dar păstrăm aceeași promisiune: transparență și grijă pentru detalii.</p>
+
+    <section class="card">
+      <h3>Valorile noastre</h3>
+      <ul>
+        <li><strong>Claritate</strong> – explicăm pe românește, fără jargon, pentru ca deciziile să fie ușoare.</li>
+        <li><strong>Disciplină</strong> – termenele nu se negociază. Proceduri clare, verificări duble.</li>
+        <li><strong>Confidențialitate</strong> – datele tale sunt în siguranță.</li>
+        <li><strong>Parteneriat</strong> – ne implicăm ca și cum am fi parte din echipa ta.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Cum arată colaborarea ideală</h3>
+      <p>La început, facem cunoștință cu afacerea ta și stabilim împreună un mod de lucru simplu: transmitere digitală a documentelor, calendar de raportare și un canal rapid de comunicare. Lunar primești un rezumat pe înțelesul tuturor și alerte când se apropie termenele.</p>
+      <p class="quote">„Contabilitatea bună nu înseamnă doar declarații depuse la timp, ci și informații care te ajută să iei decizii.”</p>
+    </section>
+
+    <section class="grid cols-3">
+      <div class="card">
+        <h4>Experiență diversă</h4>
+        <p>Am lucrat cu startup‑uri, firme mature și profesioniști independenți. Înțelegem ritmul fiecăruia.</p>
+      </div>
+      <div class="card">
+        <h4>Instrumente moderne</h4>
+        <p>Preferăm fluxurile digitale și semnăturile electronice, pentru eficiență și trasabilitate.</p>
+      </div>
+      <div class="card">
+        <h4>Răspuns rapid</h4>
+        <p>Ai un „om al tău” la care poți apela. Revenim prompt cu soluții și explicații.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Hai să povestim</h3>
+      <p>Trimite-ne câteva detalii despre compania ta și îți răspundem cu o propunere clară, adaptată volumului și specificului activității.</p>
+      <p><a id="ctaEmail" class="btn" style="background:#2563eb;color:#fff;padding:10px 14px;border-radius:12px;font-weight:600">Scrie-ne</a> <span class="muted">sau sună:</span> <canvas id="telCanvas" width="160" height="20"></canvas></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px">
+      <div class="muted">© <span id="y"></span> Dany&Co Expert Consulting SRL</div>
+      <a class="muted" href="confidentialitate.html">Politica de confidențialitate</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    var email = 'contact' + '@' + 'danyandco' + '.' + 'ro';
+    var cta = document.getElementById('ctaEmail'); if(cta){ cta.href = 'mailto:' + email; }
+    var c = document.getElementById('telCanvas'); if(c){ var ctx=c.getContext('2d'); ctx.font='600 16px system-ui,-apple-system,Segoe UI,Roboto,Arial'; ctx.fillStyle='#111827'; ctx.textBaseline='top'; ctx.fillText('0744 532 009',2,2); }
+  </script>
+</body>
+</html>

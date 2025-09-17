@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicii – Dany&Co Expert Consulting SRL</title>
+  <meta name="description" content="Servicii de contabilitate pentru firme: contabilitate financiară, salarizare, raportări fiscale, consultanță fiscală, implementare proceduri." />
+  <style>
+    :root { --bg:#ffffff; --card:#f9fafb; --text:#111827; --muted:#6b7280; --accent:#2563eb; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;line-height:1.6;background:var(--bg);color:var(--text)}
+    header{background:#f3f4f6;border-bottom:1px solid #e5e7eb}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:600}
+    .brand img{height:30px}
+    .topmenu a{margin-left:14px;color:var(--text)}
+    h1{font-size:clamp(28px,4vw,40px);margin:12px 0}
+    .grid{display:grid;gap:16px}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px}
+    .muted{color:var(--muted)}
+    .cta{display:flex;gap:12px;margin-top:12px}
+    .btn{background:var(--accent);color:#fff;border:1px solid #e5e7eb;padding:10px 14px;border-radius:12px;font-weight:600}
+    footer{border-top:1px solid #e5e7eb;background:#f9fafb;margin-top:28px}
+    @media (max-width:900px){.cols-3{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="logo.png" alt="Dany&Co"/> <span>Dany&Co Expert Consulting SRL</span></a>
+      <nav class="topmenu">
+        <a href="servicii.html">Servicii</a>
+        <a href="despre.html">Despre</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Servicii pentru companii și profesioniști</h1>
+    <p class="muted">Acoperim nevoile contabile esențiale ale unei afaceri, de la înființare până la raportări și decizii manageriale.</p>
+
+    <section class="grid cols-3" style="margin-top:16px">
+      <div class="card">
+        <h3>Contabilitate financiară</h3>
+        <ul>
+          <li>Înregistrări contabile curente</li>
+          <li>Balanțe, bilanț, note explicative</li>
+          <li>Întocmire situații financiare</li>
+          <li>Relația cu ANAF</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Salarizare & HR</h3>
+        <ul>
+          <li>State de plată, Revisal</li>
+          <li>Contracte, adeverințe</li>
+          <li>Declarații D112</li>
+          <li>Consultanță relații de muncă</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Raportări fiscale</h3>
+        <ul>
+          <li>TVA: D300, D394, D390</li>
+          <li>Impozit pe profit/micro</li>
+          <li>Declarații D100, D101, D112</li>
+          <li>Registrul jurnal & inventar</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Consultanță fiscală</h3>
+        <ul>
+          <li>Optimizare fiscală</li>
+          <li>Reorganizări & due diligence</li>
+          <li>Interpretări legislative</li>
+          <li>Asistență la controale</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Implementare & proceduri</h3>
+        <ul>
+          <li>Plan de conturi & politici</li>
+          <li>Proceduri interne & fluxuri</li>
+          <li>Digitalizare documente</li>
+          <li>Onboarding contabil</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Raportare managerială</h3>
+        <ul>
+          <li>Cash-flow & bugete</li>
+          <li>KPI și tablouri de bord</li>
+          <li>Analize pentru decizii</li>
+          <li>Întâlniri periodice</li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="margin-top:24px" class="card">
+      <h3>Cum lucrăm</h3>
+      <ol>
+        <li><strong>Discuție inițială</strong> – înțelegem specificul afacerii și volumul documentelor.</li>
+        <li><strong>Ofertă clară</strong> – tarif transparent, fără costuri ascunse.</li>
+        <li><strong>Preluare & setare</strong> – colectăm documentele, definim procedurile, stabilim termene.</li>
+        <li><strong>Raportare</strong> – trimitem lunar situații și alerte pentru termene fiscale.</li>
+      </ol>
+      <div class="cta">
+        <a class="btn" id="ctaEmail">Solicită ofertă</a>
+        <span class="muted">sau sună: <canvas id="telCanvas" width="160" height="20"></canvas></span>
+      </div>
+    </section>
+
+    <section style="margin-top:24px" class="card">
+      <h3>Întrebări frecvente</h3>
+      <p><strong>Putem lucra 100% remote?</strong> Da. Avem fluxuri digitale pentru transmiterea documentelor și semnături electronice.</p>
+      <p><strong>Oferiți ajutor la schimbarea contabilului?</strong> Da, preluăm dosarul și facem trecerea fără întreruperi.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px">
+      <div class="muted">© <span id="y"></span> Dany&Co Expert Consulting SRL</div>
+      <a class="muted" href="confidentialitate.html">Politica de confidențialitate</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // email & phone anti-spam
+    var email = 'contact' + '@' + 'danyandco' + '.' + 'ro';
+    var cta = document.getElementById('ctaEmail'); if(cta){ cta.href = 'mailto:' + email; }
+    var c = document.getElementById('telCanvas'); if(c){ var ctx=c.getContext('2d'); ctx.font='600 16px system-ui,-apple-system,Segoe UI,Roboto,Arial'; ctx.fillStyle='#111827'; ctx.textBaseline='top'; ctx.fillText('0744 532 009',2,2); }
+  </script>
+</body>
+</html>
