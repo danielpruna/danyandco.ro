@@ -5,73 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dany&Co Expert Consulting SRL – Servicii de contabilitate</title>
   <meta name="description" content="Dany&Co Expert Consulting SRL – societate de contabilitate. Servicii de contabilitate, salarizare, raportări fiscale și consultanță pentru IMM-uri." />
-  <link rel="icon" href="/favicon.ico" />
   <!-- Open Graph -->
   <meta property="og:title" content="Dany&Co Expert Consulting SRL" />
   <meta property="og:description" content="Servicii complete de contabilitate și consultanță pentru afacerea ta." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.danyandco.ro/" />
-  <meta property="og:image" content="https://www.danyandco.ro/assets/og-image.jpg" />
+  <meta property="og:image" content="https://www.danyandco.ro/logo.png" />
   <style>
-    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#60a5fa; --accent2:#22d3ee; }
+    :root { --bg:#ffffff; --card:#f9fafb; --text:#111827; --muted:#6b7280; --accent:#2563eb; --accent2:#22d3ee; }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:linear-gradient(180deg,var(--bg),#0b1224 60%,#0b1224)}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:var(--bg)}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    header{position:sticky;top:0;background:rgba(15,23,42,.8);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid #1f2937;z-index:10}
-    .nav{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
-    .brand{font-weight:700;letter-spacing:.2px}
-    .nav a{margin-left:auto}
+    header{position:sticky;top:0;background:#f3f4f6;border-bottom:1px solid #e5e7eb;z-index:10}
+    .nav{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-weight:600}
+    .brand img{height:36px;width:auto;display:block;object-fit:contain}
+    .topmenu a{margin-left:14px;color:var(--text);opacity:.9;font-weight:500}
+    .topmenu a:hover{opacity:1;text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:24px 20px}
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:42px 0}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #1f2937;padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #e5e7eb;padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
     h1{font-size:clamp(28px,4vw,44px);margin:10px 0 12px;line-height:1.1}
     p{color:var(--text);opacity:.9}
     .cta{display:flex;gap:12px;margin-top:18px}
-    .btn{border:1px solid #1f2937;background:linear-gradient(180deg,#1f2937,#111827);color:#fff;padding:12px 16px;border-radius:12px;font-weight:600}
-    .btn:hover{transform:translateY(-1px)}
-    .ghost{background:transparent}
-    .card{background:linear-gradient(180deg,#0b1224 20%,#0a1328);border:1px solid #1f2937;border-radius:16px;padding:18px}
+    .btn{border:1px solid #e5e7eb;background:var(--accent);color:#fff;padding:12px 16px;border-radius:12px;font-weight:600}
+    .btn:hover{opacity:.9;transform:translateY(-1px)}
+    .ghost{background:transparent;color:var(--accent)}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
     .grid{display:grid;gap:16px}
     .grid.cols-3{grid-template-columns:repeat(3,1fr)}
     .grid.cols-2{grid-template-columns:repeat(2,1fr)}
     .section{padding:28px 0}
     .muted{color:var(--muted)}
-    img{max-width:100%;height:auto;border-radius:12px;border:1px solid #1f2937}
-    footer{border-top:1px solid #1f2937;margin-top:32px}
+    img{max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e7eb}
+    footer{border-top:1px solid #e5e7eb;margin-top:32px;background:#f9fafb}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:18px 0}
-    .tag{display:inline-block;padding:4px 8px;border:1px solid #1f2937;border-radius:8px;margin:4px 8px 0 0;color:var(--muted);font-size:12px}
+    .tag{display:inline-block;padding:4px 8px;border:1px solid #e5e7eb;border-radius:8px;margin:4px 8px 0 0;color:var(--muted);font-size:12px}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}.topmenu{width:100%;display:flex;gap:14px;justify-content:flex-start;padding-left:46px;flex-wrap:wrap}}
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AccountingService",
-    "name": "Dany&Co Expert Consulting SRL",
-    "url": "https://www.danyandco.ro/",
-    "description": "Societate de contabilitate – servicii de contabilitate, salarii, raportări fiscale și consultanță financiară pentru IMM-uri.",
-    "areaServed": "Romania",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Str. Crișan Nr. 11, Bl. ZA1, Sc. 7, Ap. 9",
-      "addressLocality": "Slatina",
-      "addressRegion": "Olt",
-      "addressCountry": "RO"
-    },
-    "department": [
-      {"@type": "LocalBusiness", "name": "Punct de lucru Popești-Leordeni", "address": {"@type": "PostalAddress", "addressLocality": "Popești-Leordeni", "addressRegion": "Ilfov", "addressCountry": "RO"}},
-      {"@type": "LocalBusiness", "name": "Punct de lucru Berceni", "address": {"@type": "PostalAddress", "addressLocality": "Berceni", "addressRegion": "Ilfov", "addressCountry": "RO"}}
-    ]
-  }
-  </script>
 </head>
 <body>
   <header>
-    <div class="brand">
-  <img src="logo.png" alt="Dany&Co Expert Consulting" />
-  <span>Dany&Co Expert Consulting SRL</span>
-</div>
+    <div class="nav">
+      <a class="brand" href="#">
+        <img src="logo.png" alt="Dany&Co Expert Consulting" />
+        <span>Dany&Co Expert Consulting SRL</span>
+      </a>
+      <nav class="topmenu">
+        <a href="#servicii">Servicii</a>
+        <a href="#despre">Despre</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
@@ -87,76 +74,7 @@
         </div>
       </div>
       <div>
-        <!-- Înlocuiește cu imaginea ta generală de servicii -->
         <img src="/assets/servicii-contabilitate.jpg" alt="Servicii de contabilitate – ilustrație generală" loading="lazy" />
-      </div>
-    </section>
-
-    <!-- DESCRIERE / ABOUT -->
-    <section id="despre" class="section grid cols-2">
-      <div class="card">
-        <h2>Despre noi</h2>
-        <p>Suntem o echipă de profesioniști în contabilitate, cu experiență în diverse industrii. Lucrăm transparent, pe bază de proceduri clare și termene ferme.</p>
-        <ul class="muted">
-          <li>⏱️ Răspuns rapid și comunicare prietenoasă</li>
-          <li>🔒 Confidențialitate și conformitate fiscală</li>
-          <li>📊 Rapoarte la timp și fără bătăi de cap</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>De ce să lucrezi cu noi</h3>
-        <p>Îți punem la dispoziție instrumente moderne și o abordare simplă, orientată spre soluții. Ne asigurăm că înțelegi situația financiară a firmei tale, fără jargon.</p>
-        <div>
-          <span class="tag">IMM & startup</span>
-          <span class="tag">Comerț & servicii</span>
-          <span class="tag">Producție</span>
-          <span class="tag">PFA & II</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICII -->
-    <section id="servicii" class="section">
-      <h2>Servicii</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Contabilitate financiară</h3>
-          <p>Înregistrări contabile, balanțe, bilanț, note explicative, situații financiare și relația cu ANAF.</p>
-        </div>
-        <div class="card">
-          <h3>Salarizare & HR</h3>
-          <p>State de plată, Revisal, contracte, adeverințe, declarații, consultanță relații de muncă.</p>
-        </div>
-        <div class="card">
-          <h3>Raportări fiscale</h3>
-          <p>Declarații D100, D112, D300, D394, D390, impozit pe profit/micro, TVA, accize.</p>
-        </div>
-        <div class="card">
-          <h3>Consultanță fiscală</h3>
-          <p>Optimizare fiscală, reorganizări, interpretări legislative, reprezentare în controale.</p>
-        </div>
-        <div class="card">
-          <h3>Implementare & proceduri</h3>
-          <p>Setare plan de conturi, politici contabile, proceduri interne și fluxuri documente.</p>
-        </div>
-        <div class="card">
-          <h3>Raportare managerială</h3>
-          <p>Cash-flow, bugete, KPI și analize pentru decizii informate.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA SCURTĂ -->
-    <section class="section card">
-      <div class="grid cols-2">
-        <div>
-          <h2>Hai să discutăm nevoile afacerii tale</h2>
-          <p class="muted">Trimite-ne câteva detalii și revenim rapid cu o ofertă personalizată.</p>
-        </div>
-        <div>
-          <a class="btn" href="mailto:office@danyandco.ro">Contactează-ne pe email</a>
-          <div class="muted" style="margin-top:8px">sau sună: <span class="mono">+40 7xx xxx xxx</span></div>
-        </div>
       </div>
     </section>
 
@@ -170,7 +88,7 @@
             <strong>Dany&Co Expert Consulting SRL</strong><br />
             <span class="muted">Sediu social:</span> Slatina, Jud. Olt, Str. Crișan Nr. 11, Bl. ZA1, Sc. 7, Ap. 9<br />
             <span class="muted">Puncte de lucru:</span> Popești-Leordeni, Jud. Ilfov · Berceni, Jud. Ilfov<br />
-            CUI: (completează) · Nr. Reg. Com.: (completează)
+            CUI: 23416860 · Nr. Reg. Com.: J28/256/2008
           </p>
           <p>
             Email: <a id="emailLink" href="#" rel="nofollow noopener">[afișează email]</a><br />
@@ -184,6 +102,20 @@
         </div>
       </div>
     </section>
+
+    <!-- CTA SCURTĂ -->
+    <section class="section card">
+      <div class="grid cols-2">
+        <div>
+          <h2>Hai să discutăm nevoile afacerii tale</h2>
+          <p class="muted">Trimite-ne câteva detalii și revenim rapid cu o ofertă personalizată.</p>
+        </div>
+        <div>
+          <a class="btn" href="#" id="ctaEmail2">Contactează-ne pe email</a>
+          <div class="muted" style="margin-top:8px">sau sună: <a id="telLink2" href="#" rel="nofollow noopener">[afișează telefon]</a></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="container">
@@ -194,45 +126,30 @@
   </footer>
 
   <script>
-    // Year in footer
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Obfuscation to reduce spam scraping
     var em1 = 'contact';
     var em2 = 'danyandco';
     var em3 = 'ro';
     var email = em1 + '@' + em2 + '.' + em3;
 
-    var p1 = '+40';
-    var p2 = ' ';
-    var p3 = '744';
-    var p4 = ' 532';
-    var p5 = ' 009';
-    var phoneDisplay = p1 + p2 + p3 + p4 + p5;
-    var phoneHref = 'tel:' + encodeURIComponent(p1) + p3 + p4.split(' ').join('') + p5.split(' ').join('');
+    var phoneDisplay = '0744 532 009';
+    var phoneHref = 'tel:0744532009';
 
     var emailLink = document.getElementById('emailLink');
     var telLink = document.getElementById('telLink');
     var ctaEmail = document.getElementById('ctaEmail');
+    var ctaEmail2 = document.getElementById('ctaEmail2');
+    var telLink2 = document.getElementById('telLink2');
 
-    function revealEmail(ev){
-      if (ev) ev.preventDefault();
-      if (!emailLink) return;
-      emailLink.textContent = email;
-      emailLink.href = 'mailto:' + email;
-    }
-    function revealTel(ev){
-      if (ev) ev.preventDefault();
-      if (!telLink) return;
-      telLink.textContent = phoneDisplay;
-      telLink.href = phoneHref;
-    }
-    function setCta(){ if (ctaEmail) ctaEmail.href = 'mailto:' + email; }
+    function revealEmail(ev){ if (ev) ev.preventDefault(); if (!emailLink) return; emailLink.textContent = email; emailLink.href = 'mailto:' + email; if(ctaEmail) ctaEmail.href = 'mailto:' + email; if(ctaEmail2) ctaEmail2.href = 'mailto:' + email; }
+    function revealTel(ev){ if (ev) ev.preventDefault(); if (!telLink) return; telLink.textContent = phoneDisplay; telLink.href = phoneHref; if(telLink2){ telLink2.textContent = phoneDisplay; telLink2.href = phoneHref; }}
 
     if (emailLink) emailLink.addEventListener('click', revealEmail, { once:true });
     if (telLink) telLink.addEventListener('click', revealTel, { once:true });
+    if (telLink2) telLink2.addEventListener('click', revealTel, { once:true });
 
-    setTimeout(function(){ revealEmail(); revealTel(); setCta(); }, 1200);
+    setTimeout(function(){ revealEmail(); revealTel(); }, 1200);
   </script>
 </body>
 </html>
