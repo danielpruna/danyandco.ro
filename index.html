@@ -50,14 +50,19 @@
     "@type": "AccountingService",
     "name": "Dany&Co Expert Consulting SRL",
     "url": "https://www.danyandco.ro/",
-    "description": "Societate de contabilitate – servicii de contabilitate, salarii, raportări fiscale, consultanță financiară pentru IMM-uri.",
+    "description": "Societate de contabilitate – servicii de contabilitate, salarii, raportări fiscale și consultanță financiară pentru IMM-uri.",
     "areaServed": "Romania",
-    "email": "office@danyandco.ro",
-    "telephone": "+40 7xx xxx xxx",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Str. Crișan Nr. 11, Bl. ZA1, Sc. 7, Ap. 9",
+      "addressLocality": "Slatina",
+      "addressRegion": "Olt",
       "addressCountry": "RO"
-    }
+    },
+    "department": [
+      {"@type": "LocalBusiness", "name": "Punct de lucru Popești-Leordeni", "address": {"@type": "PostalAddress", "addressLocality": "Popești-Leordeni", "addressRegion": "Ilfov", "addressCountry": "RO"}},
+      {"@type": "LocalBusiness", "name": "Punct de lucru Berceni", "address": {"@type": "PostalAddress", "addressLocality": "Berceni", "addressRegion": "Ilfov", "addressCountry": "RO"}}
+    ]
   }
   </script>
 </head>
@@ -78,7 +83,7 @@
         <p>Oferim servicii complete de <strong>contabilitate</strong>, <strong>salarizare</strong>, <strong>raportări fiscale</strong> și <strong>consultanță</strong> pentru IMM-uri. Ne ocupăm noi de cifre, ca tu să te concentrezi pe creștere.</p>
         <div class="cta">
           <a class="btn" href="#servicii">Vezi servicii</a>
-          <a class="btn ghost" href="mailto:office@danyandco.ro">Solicită ofertă</a>
+          <a id="ctaEmail" class="btn ghost" href="#">Solicită ofertă</a>
         </div>
       </div>
       <div>
@@ -163,12 +168,13 @@
           <h3>Date firmă</h3>
           <p>
             <strong>Dany&Co Expert Consulting SRL</strong><br />
-            <span class="muted">Sediu: (completează adresa)</span><br />
+            <span class="muted">Sediu social:</span> Slatina, Jud. Olt, Str. Crișan Nr. 11, Bl. ZA1, Sc. 7, Ap. 9<br />
+            <span class="muted">Puncte de lucru:</span> Popești-Leordeni, Jud. Ilfov · Berceni, Jud. Ilfov<br />
             CUI: (completează) · Nr. Reg. Com.: (completează)
           </p>
           <p>
-            Email: <a href="mailto:office@danyandco.ro">office@danyandco.ro</a><br />
-            Telefon: <span class="mono">+40 7xx xxx xxx</span>
+            Email: <a id="emailLink" href="#" rel="nofollow noopener">[afișează email]</a><br />
+            Telefon: <a id="telLink" href="#" rel="nofollow noopener">[afișează telefon]</a>
           </p>
         </div>
         <div class="card">
@@ -188,8 +194,45 @@
   </footer>
 
   <script>
-    // An actualizare an curent în footer
+    // Year in footer
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Obfuscation to reduce spam scraping
+    var em1 = 'contact';
+    var em2 = 'danyandco';
+    var em3 = 'ro';
+    var email = em1 + '@' + em2 + '.' + em3;
+
+    var p1 = '+40';
+    var p2 = ' ';
+    var p3 = '744';
+    var p4 = ' 532';
+    var p5 = ' 009';
+    var phoneDisplay = p1 + p2 + p3 + p4 + p5;
+    var phoneHref = 'tel:' + encodeURIComponent(p1) + p3 + p4.split(' ').join('') + p5.split(' ').join('');
+
+    var emailLink = document.getElementById('emailLink');
+    var telLink = document.getElementById('telLink');
+    var ctaEmail = document.getElementById('ctaEmail');
+
+    function revealEmail(ev){
+      if (ev) ev.preventDefault();
+      if (!emailLink) return;
+      emailLink.textContent = email;
+      emailLink.href = 'mailto:' + email;
+    }
+    function revealTel(ev){
+      if (ev) ev.preventDefault();
+      if (!telLink) return;
+      telLink.textContent = phoneDisplay;
+      telLink.href = phoneHref;
+    }
+    function setCta(){ if (ctaEmail) ctaEmail.href = 'mailto:' + email; }
+
+    if (emailLink) emailLink.addEventListener('click', revealEmail, { once:true });
+    if (telLink) telLink.addEventListener('click', revealTel, { once:true });
+
+    setTimeout(function(){ revealEmail(); revealTel(); setCta(); }, 1200);
   </script>
 </body>
 </html>
