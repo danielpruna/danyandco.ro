@@ -67,9 +67,10 @@
   "openingHours": "Mo-Fr 09:00-18:00",
   "areaServed": ["Slatina", "Ilfov", "București"],
   "serviceType": ["Contabilitate", "Salarizare", "Raportări fiscale", "Consultanță fiscală", "Înființare firme"],
-  "priceRange": "$"
+  "priceRange": "$$"
 }
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -84,7 +85,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;transition:ba
 nav.scrolled{background:rgba(10,22,40,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{font-weight:800;font-size:18px;letter-spacing:-.5px;color:var(--white);display:flex;align-items:center;gap:10px}
-.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:var(--white)}
 .nav-links{display:flex;gap:32px;align-items:center}
 .nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
 .nav-links a:hover{color:var(--white)}
@@ -183,9 +183,22 @@ nav.scrolled{background:rgba(10,22,40,0.85);backdrop-filter:blur(20px);border-bo
 .contact-cta h3{font-size:22px;font-weight:800;color:var(--white);margin-bottom:6px}
 .contact-cta p{font-size:14px;color:var(--muted)}
 
+/* PRIVACY MODAL */
+.modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:200;align-items:center;justify-content:center;padding:24px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--dark);border:1px solid var(--border);border-radius:20px;max-width:720px;width:100%;max-height:80vh;overflow-y:auto;padding:40px;position:relative}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:background .2s}
+.modal-close:hover{background:rgba(255,255,255,0.08);color:var(--white)}
+.modal h2{font-size:24px;font-weight:800;color:var(--white);margin-bottom:24px}
+.modal h3{font-size:16px;font-weight:700;color:var(--white);margin:24px 0 8px}
+.modal p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:12px}
+.modal ul{list-style:none;padding:0;margin-bottom:12px}
+.modal ul li{font-size:14px;color:var(--muted);line-height:1.7;padding:3px 0;padding-left:16px;position:relative}
+.modal ul li::before{content:'—';position:absolute;left:0;color:var(--accent)}
+
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
-.footer-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
+.footer-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted);flex-wrap:wrap;gap:12px}
 .footer-inner a{color:var(--muted);transition:color .2s}
 .footer-inner a:hover{color:var(--white)}
 
@@ -203,6 +216,7 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
   .contact-cta{flex-direction:column;text-align:center}
   .stats-panel{grid-template-columns:1fr 1fr}
   .hero h1{font-size:36px}
+  .footer-inner{flex-direction:column;text-align:center}
 }
 @media(max-width:480px){
   .approach-grid{grid-template-columns:1fr}
@@ -257,7 +271,7 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
       <div class="stat-card fade-up">
         <div class="stat-icon si-gold">🏢</div>
         <div class="stat-num">3</div>
-        <div class="stat-label">Birouri - Slatina, Popești-Leordeni, Berceni</div>
+        <div class="stat-label">Birouri — Slatina, Popești-Leordeni, Berceni</div>
       </div>
       <div class="stat-card fade-up">
         <div class="stat-icon si-green">✓</div>
@@ -267,7 +281,7 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
       <div class="stat-card fade-up">
         <div class="stat-icon si-purple">🤝</div>
         <div class="stat-num">IMM</div>
-        <div class="stat-label">Focus exclusiv pe antreprenori și firme mici-medii</div>
+        <div class="stat-label">Focus exclusiv pe antreprenori și firme mici și medii</div>
       </div>
     </div>
   </div>
@@ -280,7 +294,7 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
   <div class="section-inner">
     <div class="section-label fade-up">Servicii</div>
     <div class="section-title fade-up">Soluții complete pentru partea financiar-contabilă</div>
-    <p class="section-desc fade-up">Ne ocupăm de toate aspectele contabile și fiscale ale afacerii tale, astfel încât tu să te concentrezi pe ceea ce contează - creșterea businessului.</p>
+    <p class="section-desc fade-up">Ne ocupăm de toate aspectele contabile și fiscale ale afacerii tale, astfel încât tu să te concentrezi pe ceea ce contează — creșterea businessului.</p>
     <div class="services-grid">
       <div class="service-card fade-up">
         <div class="svc-icon si-blue">📋</div>
@@ -305,11 +319,11 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
       <div class="service-card fade-up">
         <div class="svc-icon si-green">📈</div>
         <div class="svc-title">Raportări fiscale</div>
-        <div class="svc-desc">Declarații fiscale, TVA, impozit pe profit/venit, declarații informative - depuse corect și la termen.</div>
+        <div class="svc-desc">Declarații fiscale, TVA, impozit pe profit sau pe venit, declarații informative — depuse corect și la termen.</div>
         <ul class="svc-list">
-          <li>Declarații TVA (300, 390, 394)</li>
-          <li>Impozit pe profit / micro</li>
-          <li>Declarația unică & D101</li>
+          <li>Declarații TVA (D300, D390, D394)</li>
+          <li>Impozit pe profit și impozit pe veniturile microîntreprinderilor</li>
+          <li>Declarația unică și D101</li>
         </ul>
       </div>
       <div class="service-card fade-up">
@@ -318,26 +332,26 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
         <div class="svc-desc">Optimizare fiscală legală, planificarea impozitelor, alegerea formei de organizare și strategii de eficientizare.</div>
         <ul class="svc-list">
           <li>Optimizare fiscală</li>
-          <li>Alegerea regimului fiscal</li>
-          <li>Planificare și strategie</li>
+          <li>Alegerea regimului fiscal optim</li>
+          <li>Planificare și strategie financiară</li>
         </ul>
       </div>
       <div class="service-card fade-up">
         <div class="svc-icon si-blue">🏗️</div>
         <div class="svc-title">Înființare firme</div>
-        <div class="svc-desc">Asistență completă în procesul de înființare - de la alegerea formei juridice, la înregistrarea la Registrul Comerțului.</div>
+        <div class="svc-desc">Asistență completă în procesul de înființare — de la alegerea formei juridice până la înregistrarea la Registrul Comerțului.</div>
         <ul class="svc-list">
           <li>SRL, SRL-D, PFA, II</li>
           <li>Documentație completă</li>
-          <li>Înregistrare ONRC</li>
+          <li>Înregistrare la ONRC</li>
         </ul>
       </div>
       <div class="service-card fade-up">
         <div class="svc-icon si-gold">📑</div>
         <div class="svc-title">Revizie contabilă</div>
-        <div class="svc-desc">Verificarea conformității evidenței contabile, identificarea erorilor și recomandări de corectare sau îmbunătățire.</div>
+        <div class="svc-desc">Verificarea conformității evidenței contabile, identificarea erorilor și recomandări de corectare sau îmbunătățire a proceselor.</div>
         <ul class="svc-list">
-          <li>Audit intern al evidenței</li>
+          <li>Audit intern al evidenței contabile</li>
           <li>Reconcilieri și corecturi</li>
           <li>Rapoarte de conformitate</li>
         </ul>
@@ -352,8 +366,8 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
 <section class="section" id="proces">
   <div class="section-inner">
     <div class="section-label fade-up">Cum lucrăm</div>
-    <div class="section-title fade-up">Un proces simplu, transparent, eficient</div>
-    <p class="section-desc fade-up">De la prima discuție până la raportarea lunară - fiecare pas este clar și predictibil.</p>
+    <div class="section-title fade-up">Un proces simplu, transparent și eficient</div>
+    <p class="section-desc fade-up">De la prima discuție până la raportarea lunară — fiecare pas este clar și predictibil.</p>
     <div class="approach-grid">
       <div class="approach-card fade-up">
         <div class="approach-num">01</div>
@@ -368,7 +382,7 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
       <div class="approach-card fade-up">
         <div class="approach-num">03</div>
         <div class="approach-title">Preluare dosare</div>
-        <div class="approach-desc">Preluăm documentele și evidențele - fizic sau digital - fără bătăi de cap.</div>
+        <div class="approach-desc">Preluăm documentele și evidențele — în format fizic sau digital — fără bătăi de cap.</div>
       </div>
       <div class="approach-card fade-up">
         <div class="approach-num">04</div>
@@ -388,9 +402,9 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
     <div class="section-title fade-up">Experiență. Rigurozitate. Parteneriat.</div>
     <div class="about-grid">
       <div class="about-text fade-up">
-        <p><strong style="color:var(--white)">Dany&Co Expert Consulting</strong> a fost fondată în 2008 din convingerea că fiecare antreprenor merită un partener contabil pe care se poate baza.</p>
-        <p>Am pornit din Slatina și ne-am extins în Ilfov pentru a fi mai aproape de clienții din zona București. Cu peste 15 ani de activitate, echipa noastră combină expertiza tehnică cu atenția reală pentru nevoile fiecărui client.</p>
-        <p>Nu suntem doar un cabinet care înregistrează documente - suntem un partener de drum lung, implicat în deciziile care contează.</p>
+        <p><strong style="color:var(--white)">Dany&Co Expert Consulting</strong> a fost fondată în 2008 din convingerea că fiecare antreprenor merită un partener contabil pe care se poate baza cu adevărat.</p>
+        <p>Am pornit din Slatina și ne-am extins în județul Ilfov pentru a fi mai aproape de clienții din zona București. Cu peste 15 ani de activitate, echipa noastră îmbină expertiza tehnică cu atenția reală pentru nevoile fiecărui client.</p>
+        <p>Nu suntem doar un cabinet care înregistrează documente — suntem un partener de drum lung, implicat activ în deciziile care contează pentru afacerea ta.</p>
         <div class="about-features">
           <div class="about-feat">
             <div class="about-feat-icon">⚡</div>
@@ -402,15 +416,15 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
           </div>
           <div class="about-feat">
             <div class="about-feat-icon">📞</div>
-            <div class="about-feat-text"><strong>Disponibilitate</strong>Suntem accesibili - la birou, telefonic sau online.</div>
+            <div class="about-feat-text"><strong>Disponibilitate</strong>Suntem accesibili — la birou, telefonic sau online, în funcție de preferințele tale.</div>
           </div>
         </div>
       </div>
       <div class="about-visual fade-up">
         <div class="about-quote">
-          Un contabil bun nu doar înregistrează documente - devine un partener strategic în fiecare decizie de business.
+          Un contabil bun nu doar înregistrează documente — devine un partener strategic în fiecare decizie de business.
         </div>
-        <div class="about-author">- Filosofia Dany&Co</div>
+        <div class="about-author">— Filosofia Dany&Co</div>
         <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border)">
           <div style="display:flex;gap:24px;flex-wrap:wrap">
             <div><div style="font-size:24px;font-weight:800;color:var(--white)">2008</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Anul înființării</div></div>
@@ -442,10 +456,10 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
       </div>
       <div class="contact-card fade-up">
         <h3><span>📱</span> Contact direct</h3>
-        <div class="contact-row"><strong>Email</strong><canvas id="emailCanvas" width="220" height="20" style="vertical-align:middle;cursor:pointer" title="Click pentru email"></canvas></div>
-        <div class="contact-row"><strong>Telefon</strong><canvas id="phoneCanvas" width="160" height="20" style="vertical-align:middle;cursor:pointer" title="Click pentru apel"></canvas></div>
+        <div class="contact-row"><strong>Email</strong><canvas id="emailCanvas" width="220" height="20" style="vertical-align:middle;cursor:pointer" title="Click pentru a trimite email"></canvas></div>
+        <div class="contact-row"><strong>Telefon</strong><canvas id="phoneCanvas" width="160" height="20" style="vertical-align:middle;cursor:pointer" title="Click pentru a apela"></canvas></div>
         <div class="contact-row"><strong>Program</strong>Luni – Vineri: 09:00 – 18:00</div>
-        <div class="contact-row"><strong>Întâlniri</strong>La birou sau online, cu programare</div>
+        <div class="contact-row"><strong>Întâlniri</strong>La birou sau online, cu programare prealabilă</div>
         <div style="margin-top:20px">
           <a href="#" id="ctaEmailBtn" class="btn-primary" style="font-size:14px;padding:12px 24px">Trimite email →</a>
         </div>
@@ -453,7 +467,7 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
       <div class="contact-cta fade-up">
         <div>
           <h3>Pregătit să externalizezi contabilitatea?</h3>
-          <p>Discutăm fără obligații - analizăm nevoile afacerii tale și revenim cu o ofertă transparentă.</p>
+          <p>Discutăm fără obligații — analizăm nevoile afacerii tale și revenim cu o ofertă transparentă.</p>
         </div>
         <a href="#" id="ctaEmailBtn2" class="btn-primary">Contactează-ne acum →</a>
       </div>
@@ -461,10 +475,71 @@ footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
   </div>
 </section>
 
+<!-- PRIVACY MODAL -->
+<div class="modal-overlay" id="privacyModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closePrivacy()" aria-label="Închide">&times;</button>
+    <h2>Politica de confidențialitate</h2>
+    <p><strong style="color:var(--white)">Ultima actualizare:</strong> Martie 2026</p>
+
+    <h3>1. Operatorul de date</h3>
+    <p>Operatorul de date cu caracter personal este <strong style="color:var(--white)">Dany&Co Expert Consulting SRL</strong>, cu sediul social în Slatina, Jud. Olt, Str. Crișan Nr. 11, Bl. ZA1, Sc. 7, Ap. 9, CUI 23416860, J28/256/2008.</p>
+
+    <h3>2. Datele pe care le colectăm</h3>
+    <p>În cadrul relației contractuale și al comunicării prin intermediul acestui site, putem colecta următoarele categorii de date personale:</p>
+    <ul>
+      <li>Nume și prenume</li>
+      <li>Adresă de email</li>
+      <li>Număr de telefon</li>
+      <li>Date de identificare ale firmei (CUI, denumire, adresă sediu)</li>
+      <li>Documente contabile și financiare transmise în scopul prestării serviciilor</li>
+    </ul>
+
+    <h3>3. Scopul prelucrării</h3>
+    <p>Datele personale sunt prelucrate exclusiv în următoarele scopuri:</p>
+    <ul>
+      <li>Prestarea serviciilor de contabilitate, salarizare și consultanță fiscală</li>
+      <li>Comunicarea cu clienții și potențialii clienți</li>
+      <li>Îndeplinirea obligațiilor legale și fiscale</li>
+      <li>Răspunsul la solicitările primite prin email sau telefon</li>
+    </ul>
+
+    <h3>4. Temeiul juridic</h3>
+    <p>Prelucrarea datelor se realizează în baza: executării contractului de prestări servicii, îndeplinirii obligațiilor legale ale operatorului și consimțământului persoanei vizate, acolo unde este cazul.</p>
+
+    <h3>5. Durata de stocare</h3>
+    <p>Datele personale sunt păstrate pe durata relației contractuale și ulterior, conform termenelor impuse de legislația fiscală și contabilă în vigoare (de regulă, 10 ani de la încheierea exercițiului financiar).</p>
+
+    <h3>6. Drepturile persoanelor vizate</h3>
+    <p>Conform Regulamentului (UE) 2016/679 (GDPR), ai următoarele drepturi:</p>
+    <ul>
+      <li>Dreptul de acces la datele tale personale</li>
+      <li>Dreptul la rectificarea datelor inexacte</li>
+      <li>Dreptul la ștergerea datelor („dreptul de a fi uitat"), în condițiile legii</li>
+      <li>Dreptul la restricționarea prelucrării</li>
+      <li>Dreptul la portabilitatea datelor</li>
+      <li>Dreptul de a te opune prelucrării</li>
+      <li>Dreptul de a depune o plângere la ANSPDCP (Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal)</li>
+    </ul>
+
+    <h3>7. Securitatea datelor</h3>
+    <p>Aplicăm măsuri tehnice și organizatorice adecvate pentru protecția datelor personale împotriva accesului neautorizat, pierderii, distrugerii sau divulgării.</p>
+
+    <h3>8. Transferul datelor către terți</h3>
+    <p>Nu transmitem date personale către terți, cu excepția situațiilor impuse de lege (de exemplu, raportări către ANAF sau alte autorități competente) sau a furnizorilor de servicii care acționează în calitate de persoane împuternicite, în baza unor acorduri contractuale conforme cu GDPR.</p>
+
+    <h3>9. Cookie-uri</h3>
+    <p>Acest site nu utilizează cookie-uri de tracking sau de marketing. Nu sunt colectate date de navigare în scopuri publicitare.</p>
+
+    <h3>10. Contact</h3>
+    <p>Pentru orice solicitare legată de datele tale personale, ne poți contacta la adresa de email sau la numărul de telefon afișate pe acest site.</p>
+  </div>
+</div>
+
 <footer>
   <div class="footer-inner">
     <div>© <span id="y"></span> Dany&Co Expert Consulting SRL. Toate drepturile rezervate.</div>
-    <a href="confidentialitate.html">Politica de confidențialitate</a>
+    <a href="#" onclick="openPrivacy();return false">Politica de confidențialitate</a>
   </div>
 </footer>
 
@@ -480,13 +555,18 @@ window.addEventListener('scroll',function(){nb.classList.toggle('scrolled',windo
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
 function closeMenu(){document.getElementById('navLinks').classList.remove('open')}
 
-// Anti-spam email & phone
+// Privacy modal
+function openPrivacy(){document.getElementById('privacyModal').classList.add('open');document.body.style.overflow='hidden'}
+function closePrivacy(){document.getElementById('privacyModal').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('privacyModal').addEventListener('click',function(e){if(e.target===this)closePrivacy()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closePrivacy()});
+
+// Anti-spam email & phone (canvas)
 var e1='contact',e2='danyandco',e3='ro',em=e1+'@'+e2+'.'+e3;
 var ph='0744 532 009';
 var ctaB=document.getElementById('ctaEmailBtn');
 var ctaB2=document.getElementById('ctaEmailBtn2');
 
-// Draw anti-spam canvases
 function drawCanvas(id,text,color){
   var c=document.getElementById(id);if(!c)return;
   var ctx=c.getContext('2d');
