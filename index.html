@@ -1,165 +1,461 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dany&Co Expert Consulting SRL – Servicii de contabilitate</title>
-  <meta name="description" content="Dany&Co Expert Consulting SRL – servicii de contabilitate, salarizare, raportări fiscale și consultanță pentru IMM-uri." />
-  <meta property="og:title" content="Dany&Co Expert Consulting SRL" />
-  <meta property="og:description" content="Servicii complete de contabilitate și consultanță pentru afacerea ta." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.danyandco.ro/" />
-  <meta property="og:image" content="https://www.danyandco.ro/logo.png" />
-  <style>
-    :root { --bg:#ffffff; --card:#f9fafb; --text:#111827; --muted:#6b7280; --accent:#2563eb; }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:var(--bg)}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{position:sticky;top:0;background:#f3f4f6;border-bottom:1px solid #e5e7eb;z-index:10}
-    .nav{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-weight:600}
-    .brand img{height:36px;width:auto;display:block;object-fit:contain}
-    .topmenu a{margin-left:14px;color:var(--text);opacity:.9;font-weight:500}
-    .topmenu a:hover{opacity:1;text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:28px 20px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:56px 0 42px}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #e5e7eb;padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
-    h1{font-size:clamp(28px,4vw,44px);margin:12px 0 14px;line-height:1.1}
-    h2{margin:24px 0 12px;font-size:clamp(22px,3vw,32px)}
-    p{color:var(--text);opacity:.9}
-    .cta{display:flex;gap:12px;margin-top:18px}
-    .btn{border:1px solid #e5e7eb;background:var(--accent);color:#fff;padding:12px 16px;border-radius:16px;font-weight:600;box-shadow:0 0 0 4px rgba(37,99,235,.15)}
-    .btn:hover{opacity:.95;transform:translateY(-1px)}
-    .ghost{background:transparent;color:var(--accent);box-shadow:none}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
-    .grid{display:grid;gap:16px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    .section{padding:28px 0}
-    .muted{color:var(--muted)}
-    img{max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e7eb}
-    .cta-card{padding:32px}
-    .telline{margin-top:14px}
-    footer{border-top:1px solid #e5e7eb;margin-top:32px;background:#f9fafb}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:18px 0}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}.topmenu{width:100%;display:flex;gap:14px;justify-content:flex-start;padding-left:46px;flex-wrap:wrap}}
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Dany&Co Expert Consulting SRL – Servicii de contabilitate</title>
+<meta name="description" content="Dany&Co Expert Consulting SRL – servicii de contabilitate, salarizare, raportări fiscale și consultanță pentru IMM-uri."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0a1628;--dark:#0f1d32;--accent:#3b82f6;--accent2:#60a5fa;--gold:#f59e0b;--glass:rgba(255,255,255,0.04);--border:rgba(255,255,255,0.08);--text:#e2e8f0;--muted:#94a3b8;--white:#ffffff}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--navy);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;transition:background .3s,backdrop-filter .3s}
+nav.scrolled{background:rgba(10,22,40,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:800;font-size:18px;letter-spacing:-.5px;color:var(--white);display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:var(--white)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent);color:var(--white)!important;padding:10px 20px;border-radius:10px;font-weight:600;font-size:13px;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(59,130,246,0.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{width:22px;height:2px;background:var(--white);border-radius:2px;transition:transform .3s}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 24px 80px}
+.hero::before{content:'';position:absolute;top:-40%;right:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(59,130,246,0.08) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(245,158,11,0.05) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1140px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--border);border-radius:999px;font-size:12px;font-weight:600;color:var(--accent2);text-transform:uppercase;letter-spacing:1px;margin-bottom:24px;background:rgba(59,130,246,0.06)}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(36px,5vw,56px);font-weight:800;line-height:1.08;letter-spacing:-1.5px;color:var(--white);margin-bottom:20px}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:18px;line-height:1.7;color:var(--muted);max-width:480px;margin-bottom:36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:var(--white);padding:14px 28px;border-radius:12px;font-weight:700;font-size:15px;transition:all .2s;display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(59,130,246,0.35)}
+.btn-secondary{background:var(--glass);color:var(--white);padding:14px 28px;border-radius:12px;font-weight:600;font-size:15px;border:1px solid var(--border);transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-secondary:hover{background:rgba(255,255,255,0.08);transform:translateY(-1px)}
+
+/* Stats panel */
+.stats-panel{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat-card{background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:28px 24px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.stat-card:hover{transform:translateY(-4px);border-color:rgba(59,130,246,0.2)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
+.stat-card:hover::before{opacity:1}
+.stat-num{font-size:32px;font-weight:800;color:var(--white);letter-spacing:-1px;line-height:1}
+.stat-label{font-size:13px;color:var(--muted);margin-top:8px;font-weight:500}
+.stat-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:18px}
+.si-blue{background:rgba(59,130,246,0.1);color:var(--accent2)}
+.si-gold{background:rgba(245,158,11,0.1);color:var(--gold)}
+.si-green{background:rgba(34,197,94,0.1);color:#4ade80}
+.si-purple{background:rgba(168,85,247,0.1);color:#c084fc}
+
+/* SECTIONS */
+.section{padding:100px 24px}
+.section-inner{max-width:1140px;margin:0 auto}
+.section-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent2);margin-bottom:12px}
+.section-title{font-size:clamp(28px,3.5vw,40px);font-weight:800;color:var(--white);letter-spacing:-1px;margin-bottom:16px;line-height:1.15}
+.section-desc{font-size:16px;color:var(--muted);max-width:560px;line-height:1.7}
+
+/* DIVIDER */
+.divider{height:1px;background:var(--border);max-width:1140px;margin:0 auto}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.service-card{background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:32px 28px;transition:all .3s;position:relative;overflow:hidden}
+.service-card:hover{border-color:rgba(59,130,246,0.2);transform:translateY(-4px);background:rgba(255,255,255,0.06)}
+.service-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .3s}
+.service-card:hover::after{opacity:1}
+.svc-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px}
+.svc-title{font-size:17px;font-weight:700;color:var(--white);margin-bottom:10px}
+.svc-desc{font-size:14px;color:var(--muted);line-height:1.65}
+.svc-list{margin-top:14px;list-style:none;padding:0}
+.svc-list li{font-size:13px;color:var(--muted);padding:4px 0;display:flex;align-items:center;gap:8px}
+.svc-list li::before{content:'';width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0}
+
+/* APPROACH */
+.approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.approach-card{text-align:center;padding:32px 20px;border-radius:16px;border:1px solid var(--border);background:var(--glass);transition:all .3s}
+.approach-card:hover{border-color:rgba(59,130,246,0.2);transform:translateY(-3px)}
+.approach-num{font-size:48px;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:16px}
+.approach-title{font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px}
+.approach-desc{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:48px}
+.about-text p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px}
+.about-features{display:grid;gap:14px;margin-top:24px}
+.about-feat{display:flex;gap:14px;align-items:flex-start}
+.about-feat-icon{width:36px;height:36px;border-radius:8px;background:rgba(59,130,246,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+.about-feat-text{font-size:14px;color:var(--muted);line-height:1.6}
+.about-feat-text strong{color:var(--white);display:block;margin-bottom:2px;font-size:14px}
+.about-visual{background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:40px;position:relative;overflow:hidden}
+.about-visual::before{content:'';position:absolute;top:-50%;right:-50%;width:300px;height:300px;background:radial-gradient(circle,rgba(59,130,246,0.06),transparent 70%)}
+.about-quote{font-size:20px;font-weight:600;color:var(--white);line-height:1.5;font-style:italic;position:relative;z-index:1}
+.about-quote::before{content:'"';font-size:80px;font-weight:800;color:var(--accent);opacity:.3;position:absolute;top:-20px;left:-8px;line-height:1}
+.about-author{margin-top:20px;font-size:14px;color:var(--muted);position:relative;z-index:1}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}
+.contact-card{background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:32px 28px;transition:all .3s}
+.contact-card:hover{border-color:rgba(59,130,246,0.15)}
+.contact-card h3{font-size:16px;font-weight:700;color:var(--white);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.contact-card h3 span{font-size:18px}
+.contact-row{font-size:14px;color:var(--muted);padding:8px 0;line-height:1.6;display:flex;gap:8px}
+.contact-row strong{color:var(--text);font-weight:600;min-width:90px;flex-shrink:0}
+.contact-link{color:var(--accent2);transition:color .2s}
+.contact-link:hover{color:var(--white)}
+.contact-cta{grid-column:1/-1;background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(96,165,250,0.05));border:1px solid rgba(59,130,246,0.15);border-radius:16px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.contact-cta h3{font-size:22px;font-weight:800;color:var(--white);margin-bottom:6px}
+.contact-cta p{font-size:14px;color:var(--muted)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:24px;margin-top:20px}
+.footer-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
+.footer-inner a{color:var(--muted);transition:color .2s}
+.footer-inner a:hover{color:var(--white)}
+
+/* MOBILE */
+@media(max-width:900px){
+  .nav-links{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:rgba(10,22,40,0.98);flex-direction:column;padding:40px 24px;gap:24px;backdrop-filter:blur(20px)}
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:18px;color:var(--white)}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr;gap:48px}
+  .services-grid{grid-template-columns:1fr}
+  .approach-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-cta{flex-direction:column;text-align:center}
+  .stats-panel{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:36px}
+}
+@media(max-width:480px){
+  .approach-grid{grid-template-columns:1fr}
+  .stats-panel{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column}
+  .btn-primary,.btn-secondary{width:100%;justify-content:center}
+}
+
+/* Animations */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="logo.png" alt="Dany&Co Expert Consulting" />
-        <span>Dany&Co Expert Consulting SRL</span>
-      </a>
-      <nav class="topmenu">
-        <a href="servicii.html">Servicii</a>
-        <a href="despre.html">Despre</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img src="logo2026.png" alt="Dany&Co Expert Consulting" style="height:40px;width:auto">
+      Dany&Co
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#servicii" onclick="closeMenu()">Servicii</a>
+      <a href="#proces" onclick="closeMenu()">Cum lucrăm</a>
+      <a href="#despre" onclick="closeMenu()">Despre noi</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+      <a href="#contact" class="nav-cta" onclick="closeMenu()">Solicită ofertă</a>
     </div>
-  </header>
-
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="badge">Societate de contabilitate</div>
-        <h1>Contabilitate clară. Decizii mai bune pentru afacerea ta.</h1>
-        <p>Oferim servicii complete de <strong>contabilitate</strong>, <strong>salarizare</strong>, <strong>raportări fiscale</strong> și <strong>consultanță</strong> pentru IMM-uri. Ne ocupăm noi de cifre, ca tu să te concentrezi pe creștere.</p>
-        <div class="cta">
-          <a class="btn" href="servicii.html">Vezi servicii</a>
-          <a id="ctaEmail" class="btn ghost" href="#">Solicită ofertă</a>
-        </div>
-      </div>
-      <div>
-        <svg viewBox="0 0 600 380" role="img" aria-label="Ilustrație servicii contabilitate" style="width:100%;height:auto;border:1px solid #e5e7eb;border-radius:12px"><rect width="600" height="380" fill="#f5f7fb"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#6b7280">Servicii de contabilitate</text></svg>
-      </div>
-    </section>
-
-    <!-- DESPRE -->
-    <section id="despre" class="section">
-      <h2>Despre noi</h2>
-      <div class="card">
-        <p>Povestea <strong>Dany&Co Expert Consulting</strong> a început din dorința de a ajuta antreprenorii să aibă claritate în cifrele lor. Am pornit din Slatina și ne-am extins în Ilfov pentru a fi mai aproape de clienți. Cu experiență de peste 15 ani în domeniul financiar-contabil, echipa noastră îmbină expertiza tehnică cu grija pentru oameni.</p>
-        <p>Credem că un contabil bun nu doar înregistrează documente, ci devine un partener de drum lung, care oferă suport real în deciziile de afaceri.</p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="grid cols-2">
-        <div class="card">
-          <h3>Date firmă</h3>
-          <p>
-            <strong>Dany&Co Expert Consulting SRL</strong><br />
-            <span class="muted">Sediu social:</span> Slatina, Jud. Olt, Str. Crișan Nr. 11, Bl. ZA1, Sc. 7, Ap. 9<br />
-            <span class="muted">Puncte de lucru:</span> Popești-Leordeni, Jud. Ilfov · Berceni, Jud. Ilfov<br />
-            CUI: 23416860 · Nr. Reg. Com.: J28/256/2008
-          </p>
-          <p>
-            Email: <a id="emailLink" href="#" rel="nofollow noopener">[afișează email]</a><br />
-            Telefon: <span class="mono" aria-label="număr telefon"><canvas id="telCanvas1" width="180" height="24"></canvas></span>
-          </p>
-        </div>
-        <div class="card">
-          <h3>Program</h3>
-          <p>Luni–Vineri: 09:00–18:00<br />Sâmbătă–Duminică: închis</p>
-          <p class="muted">Întâlniri la birou sau online, cu programare prealabilă.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA SCURTĂ -->
-    <section class="section card cta-card">
-      <div class="grid cols-2">
-        <div>
-          <h2>Hai să discutăm nevoile afacerii tale</h2>
-          <p class="muted">Trimite-ne câteva detalii și revenim rapid cu o ofertă personalizată.</p>
-        </div>
-        <div>
-          <a class="btn" href="#" id="ctaEmail2">Contactează-ne pe email</a>
-          <div class="muted telline">sau sună: <span class="mono"><canvas id="telCanvas2" width="160" height="20"></canvas></span></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container">
-    <div class="footer-grid">
-      <div class="muted">© <span id="y"></span> Dany&Co Expert Consulting SRL. Toate drepturile rezervate.</div>
-      <div style="text-align:right" class="muted"><a href="confidentialitate.html">Politica de confidențialitate</a></div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
     </div>
-  </footer>
+  </div>
+</nav>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Din 2008 · Contabilitate & Consultanță</div>
+      <h1>Partenerul financiar pe care afacerea ta <span>îl merită</span></h1>
+      <p class="hero-sub">Contabilitate, salarizare, raportări fiscale și consultanță strategică pentru IMM-uri. Rigurozitate, transparență, rezultate.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Solicită ofertă →</a>
+        <a href="#servicii" class="btn-secondary">Descoperă serviciile</a>
+      </div>
+    </div>
+    <div class="stats-panel">
+      <div class="stat-card fade-up">
+        <div class="stat-icon si-blue">📊</div>
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Ani de experiență în domeniul financiar-contabil</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-icon si-gold">🏢</div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">Birouri — Slatina, Popești-Leordeni, Berceni</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-icon si-green">✓</div>
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Conformitate fiscală și raportare la termen</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-icon si-purple">🤝</div>
+        <div class="stat-num">IMM</div>
+        <div class="stat-label">Focus exclusiv pe antreprenori și firme mici-medii</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    var em1 = 'contact';
-    var em2 = 'danyandco';
-    var em3 = 'ro';
-    var email = em1 + '@' + em2 + '.' + em3;
+<div class="divider"></div>
 
-    var emailLink = document.getElementById('emailLink');
-    var ctaEmail = document.getElementById('ctaEmail');
-    var ctaEmail2 = document.getElementById('ctaEmail2');
+<!-- SERVICII -->
+<section class="section" id="servicii">
+  <div class="section-inner">
+    <div class="section-label fade-up">Servicii</div>
+    <div class="section-title fade-up">Soluții complete pentru partea financiar-contabilă</div>
+    <p class="section-desc fade-up">Ne ocupăm de toate aspectele contabile și fiscale ale afacerii tale, astfel încât tu să te concentrezi pe ceea ce contează — creșterea businessului.</p>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="svc-icon si-blue">📋</div>
+        <div class="svc-title">Contabilitate curentă</div>
+        <div class="svc-desc">Evidență contabilă completă, înregistrarea documentelor primare, balanțe de verificare și situații financiare anuale.</div>
+        <ul class="svc-list">
+          <li>Contabilitate primară și de gestiune</li>
+          <li>Situații financiare anuale</li>
+          <li>Balanțe și registre contabile</li>
+        </ul>
+      </div>
+      <div class="service-card fade-up">
+        <div class="svc-icon si-gold">💰</div>
+        <div class="svc-title">Salarizare & HR</div>
+        <div class="svc-desc">Calcul salarii, administrare contracte de muncă, declarații lunare și gestionarea completă a dosarelor de personal.</div>
+        <ul class="svc-list">
+          <li>Calcul salarii și contribuții</li>
+          <li>Contracte și acte adiționale</li>
+          <li>Declarația 112 și alte raportări</li>
+        </ul>
+      </div>
+      <div class="service-card fade-up">
+        <div class="svc-icon si-green">📈</div>
+        <div class="svc-title">Raportări fiscale</div>
+        <div class="svc-desc">Declarații fiscale, TVA, impozit pe profit/venit, declarații informative — depuse corect și la termen.</div>
+        <ul class="svc-list">
+          <li>Declarații TVA (300, 390, 394)</li>
+          <li>Impozit pe profit / micro</li>
+          <li>Declarația unică & D101</li>
+        </ul>
+      </div>
+      <div class="service-card fade-up">
+        <div class="svc-icon si-purple">🧭</div>
+        <div class="svc-title">Consultanță fiscală</div>
+        <div class="svc-desc">Optimizare fiscală legală, planificarea impozitelor, alegerea formei de organizare și strategii de eficientizare.</div>
+        <ul class="svc-list">
+          <li>Optimizare fiscală</li>
+          <li>Alegerea regimului fiscal</li>
+          <li>Planificare și strategie</li>
+        </ul>
+      </div>
+      <div class="service-card fade-up">
+        <div class="svc-icon si-blue">🏗️</div>
+        <div class="svc-title">Înființare firme</div>
+        <div class="svc-desc">Asistență completă în procesul de înființare — de la alegerea formei juridice, la înregistrarea la Registrul Comerțului.</div>
+        <ul class="svc-list">
+          <li>SRL, SRL-D, PFA, II</li>
+          <li>Documentație completă</li>
+          <li>Înregistrare ONRC</li>
+        </ul>
+      </div>
+      <div class="service-card fade-up">
+        <div class="svc-icon si-gold">📑</div>
+        <div class="svc-title">Revizie contabilă</div>
+        <div class="svc-desc">Verificarea conformității evidenței contabile, identificarea erorilor și recomandări de corectare sau îmbunătățire.</div>
+        <ul class="svc-list">
+          <li>Audit intern al evidenței</li>
+          <li>Reconcilieri și corecturi</li>
+          <li>Rapoarte de conformitate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    function revealEmail(ev){ if (ev) ev.preventDefault(); if (!emailLink) return; emailLink.textContent = email; emailLink.href = 'mailto:' + email; }
-    if (emailLink) emailLink.addEventListener('click', revealEmail, { once:true });
-    setTimeout(function(){ revealEmail(); if(ctaEmail) ctaEmail.href = 'mailto:' + email; if(ctaEmail2) ctaEmail2.href = 'mailto:' + email; }, 900);
+<div class="divider"></div>
 
-    function drawPhone(id, text){
-      var c = document.getElementById(id); if(!c) return; var ctx = c.getContext('2d');
-      ctx.font = '600 16px system-ui, -apple-system, Segoe UI, Roboto, Arial';
-      ctx.fillStyle = '#111827';
-      ctx.textBaseline = 'top';
-      ctx.fillText(text, 2, 2);
-    }
-    drawPhone('telCanvas1','0744 532 009');
-    drawPhone('telCanvas2','0744 532 009');
-  </script>
+<!-- PROCES -->
+<section class="section" id="proces">
+  <div class="section-inner">
+    <div class="section-label fade-up">Cum lucrăm</div>
+    <div class="section-title fade-up">Un proces simplu, transparent, eficient</div>
+    <p class="section-desc fade-up">De la prima discuție până la raportarea lunară — fiecare pas este clar și predictibil.</p>
+    <div class="approach-grid">
+      <div class="approach-card fade-up">
+        <div class="approach-num">01</div>
+        <div class="approach-title">Discuție inițială</div>
+        <div class="approach-desc">Analizăm specificul afacerii tale, volumul de activitate și cerințele fiscale.</div>
+      </div>
+      <div class="approach-card fade-up">
+        <div class="approach-num">02</div>
+        <div class="approach-title">Ofertă personalizată</div>
+        <div class="approach-desc">Primești o propunere clară, cu servicii și tarife adaptate nevoilor tale reale.</div>
+      </div>
+      <div class="approach-card fade-up">
+        <div class="approach-num">03</div>
+        <div class="approach-title">Preluare dosare</div>
+        <div class="approach-desc">Preluăm documentele și evidențele — fizic sau digital — fără bătăi de cap.</div>
+      </div>
+      <div class="approach-card fade-up">
+        <div class="approach-num">04</div>
+        <div class="approach-title">Raportare continuă</div>
+        <div class="approach-desc">Primești rapoarte periodice și ești informat la fiecare pas important.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DESPRE -->
+<section class="section" id="despre">
+  <div class="section-inner">
+    <div class="section-label fade-up">Despre noi</div>
+    <div class="section-title fade-up">Experiență. Rigurozitate. Parteneriat.</div>
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <p><strong style="color:var(--white)">Dany&Co Expert Consulting</strong> a fost fondată în 2008 din convingerea că fiecare antreprenor merită un partener contabil pe care se poate baza.</p>
+        <p>Am pornit din Slatina și ne-am extins în Ilfov pentru a fi mai aproape de clienții din zona București. Cu peste 15 ani de activitate, echipa noastră combină expertiza tehnică cu atenția reală pentru nevoile fiecărui client.</p>
+        <p>Nu suntem doar un cabinet care înregistrează documente — suntem un partener de drum lung, implicat în deciziile care contează.</p>
+        <div class="about-features">
+          <div class="about-feat">
+            <div class="about-feat-icon">⚡</div>
+            <div class="about-feat-text"><strong>Reactivitate</strong>Răspundem prompt la solicitări și respectăm fiecare termen legal.</div>
+          </div>
+          <div class="about-feat">
+            <div class="about-feat-icon">🔒</div>
+            <div class="about-feat-text"><strong>Confidențialitate</strong>Datele tale financiare sunt tratate cu maximă discreție și securitate.</div>
+          </div>
+          <div class="about-feat">
+            <div class="about-feat-icon">📞</div>
+            <div class="about-feat-text"><strong>Disponibilitate</strong>Suntem accesibili — la birou, telefonic sau online.</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual fade-up">
+        <div class="about-quote">
+          Un contabil bun nu doar înregistrează documente — devine un partener strategic în fiecare decizie de business.
+        </div>
+        <div class="about-author">— Filosofia Dany&Co</div>
+        <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border)">
+          <div style="display:flex;gap:24px;flex-wrap:wrap">
+            <div><div style="font-size:24px;font-weight:800;color:var(--white)">2008</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Anul înființării</div></div>
+            <div><div style="font-size:24px;font-weight:800;color:var(--white)">Slatina</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Sediu social</div></div>
+            <div><div style="font-size:24px;font-weight:800;color:var(--white)">Ilfov</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Puncte de lucru</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-label fade-up">Contact</div>
+    <div class="section-title fade-up">Hai să colaborăm</div>
+    <p class="section-desc fade-up">Trimite-ne un mesaj sau sună-ne direct. Revenim cu o ofertă personalizată.</p>
+    <div class="contact-grid">
+      <div class="contact-card fade-up">
+        <h3><span>🏢</span> Date firmă</h3>
+        <div class="contact-row"><strong>Firmă</strong>Dany&Co Expert Consulting SRL</div>
+        <div class="contact-row"><strong>CUI</strong>23416860</div>
+        <div class="contact-row"><strong>Reg. Com.</strong>J28/256/2008</div>
+        <div class="contact-row"><strong>Sediu</strong>Slatina, Jud. Olt, Str. Crișan Nr. 11, Bl. ZA1, Sc. 7, Ap. 9</div>
+        <div class="contact-row"><strong>Puncte lucru</strong>Popești-Leordeni · Berceni, Jud. Ilfov</div>
+      </div>
+      <div class="contact-card fade-up">
+        <h3><span>📱</span> Contact direct</h3>
+        <div class="contact-row"><strong>Email</strong><canvas id="emailCanvas" width="220" height="20" style="vertical-align:middle;cursor:pointer" title="Click pentru email"></canvas></div>
+        <div class="contact-row"><strong>Telefon</strong><canvas id="phoneCanvas" width="160" height="20" style="vertical-align:middle;cursor:pointer" title="Click pentru apel"></canvas></div>
+        <div class="contact-row"><strong>Program</strong>Luni – Vineri: 09:00 – 18:00</div>
+        <div class="contact-row"><strong>Întâlniri</strong>La birou sau online, cu programare</div>
+        <div style="margin-top:20px">
+          <a href="#" id="ctaEmailBtn" class="btn-primary" style="font-size:14px;padding:12px 24px">Trimite email →</a>
+        </div>
+      </div>
+      <div class="contact-cta fade-up">
+        <div>
+          <h3>Pregătit să externalizezi contabilitatea?</h3>
+          <p>Discutăm fără obligații — analizăm nevoile afacerii tale și revenim cu o ofertă transparentă.</p>
+        </div>
+        <a href="#" id="ctaEmailBtn2" class="btn-primary">Contactează-ne acum →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="y"></span> Dany&Co Expert Consulting SRL. Toate drepturile rezervate.</div>
+    <a href="confidentialitate.html">Politica de confidențialitate</a>
+  </div>
+</footer>
+
+<script>
+// Year
+document.getElementById('y').textContent=new Date().getFullYear();
+
+// Nav scroll
+var nb=document.getElementById('navbar');
+window.addEventListener('scroll',function(){nb.classList.toggle('scrolled',window.scrollY>40)});
+
+// Mobile menu
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+function closeMenu(){document.getElementById('navLinks').classList.remove('open')}
+
+// Anti-spam email & phone
+var e1='contact',e2='danyandco',e3='ro',em=e1+'@'+e2+'.'+e3;
+var ph='0744 532 009';
+var ctaB=document.getElementById('ctaEmailBtn');
+var ctaB2=document.getElementById('ctaEmailBtn2');
+
+// Draw anti-spam canvases
+function drawCanvas(id,text,color){
+  var c=document.getElementById(id);if(!c)return;
+  var ctx=c.getContext('2d');
+  ctx.font='500 14px Inter,system-ui,-apple-system,sans-serif';
+  ctx.fillStyle=color||'#60a5fa';
+  ctx.textBaseline='middle';
+  ctx.fillText(text,0,10);
+}
+drawCanvas('emailCanvas',em,'#60a5fa');
+drawCanvas('phoneCanvas',ph,'#60a5fa');
+
+// Click to action
+document.getElementById('emailCanvas').addEventListener('click',function(){window.location.href='mailto:'+em});
+document.getElementById('phoneCanvas').addEventListener('click',function(){window.location.href='tel:+40744532009'});
+
+setTimeout(function(){
+  if(ctaB)ctaB.href='mailto:'+em;
+  if(ctaB2)ctaB2.href='mailto:'+em;
+},1200);
+
+// Scroll animations
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');obs.unobserve(en.target)}})
+},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el)});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(ev){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){ev.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
 </body>
 </html>
